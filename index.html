@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArcadeVerse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -24,7 +29,262 @@
         </nav>
     </header>
 
-    <script src="js/script.js"></script>
+    <section class="hero">
 
+    <div class="hero-content">
+        
+
+        <h2>Welcome. Compete. Have Fun.</h2>
+
+        <p>
+            Discover a collection of classic offline games
+            that you can enjoy anytime, anywhere.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#categories" class="btn-primary">Explore Games</a>
+            <a href="#featured" class="btn-secondary">Play Featured</a>
+        </div>
+
+    </div>
+    <div class="floating-icons">
+
+    <img src="images/icons/controller.png" class="icon controller">
+
+    <img src="images/icons/dice.png" class="icon dice">
+
+    <img src="images/icons/joystick.png" class="icon joystick">
+
+    <img src="images/icons/star.png" class="icon star">
+
+</div>
+</section>
+
+<section class="search-section">
+
+    <h2>Find Your Next Game</h2>
+
+    <input
+        type="text"
+        placeholder="Search games..."
+        id="searchBar"
+    >
+
+</section>
+<section class="categories">
+
+    <h2>Browse Categories</h2>
+
+    <div class="category-grid">
+
+        <div class="category-card">
+            🎮
+            <h3>Arcade</h3>
+        </div>
+
+        <div class="category-card">
+            🧠
+            <h3>Puzzle</h3>
+        </div>
+        <div class="category-card">
+            ⚡
+            <h3>Reflex</h3>
+        </div>
+        <div class="category-card">
+            👥
+            <h3>Multiplayer</h3>
+        </div>
+    </div>
+</section>
+   <!-- ================= FEATURED GAMES ================= -->
+
+<section class="featured" id="featured">
+
+    <h2>⭐ Featured Games</h2>
+
+    <p class="featured-subtitle">
+        Choose a game and start playing instantly.
+    </p>
+
+    <div class="featured-grid">
+
+        <!-- Tic Tac Toe -->
+        <div class="featured-card">
+
+            <div class="game-icon">❌ ⭕</div>
+
+            <h3>Tic Tac Toe</h3>
+
+            <span class="difficulty easy">Easy</span>
+
+            <p>Classic Strategy Game</p>
+
+            <a href="games/tictactoe.html" class="play-btn">
+                ▶ Play Now
+            </a>
+
+        </div>
+
+        <!-- Snake -->
+        <div class="featured-card">
+
+            <div class="game-icon">🐍</div>
+
+            <h3>Snake</h3>
+
+            <span class="difficulty medium">Medium</span>
+
+            <p>Arcade Game</p>
+
+            <a href="games/snake.html" class="play-btn">
+                ▶ Play Now
+            </a>
+
+        </div>
+
+        <!-- Memory -->
+        <div class="featured-card">
+
+            <div class="game-icon">🧠</div>
+
+            <h3>Memory Game</h3>
+
+            <span class="difficulty easy">Easy</span>
+
+            <p>Match The Cards</p>
+
+            <a href="games/memory.html" class="play-btn">
+                ▶ Play Now
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= Statistics ================= -->
+
+<section class="stats">
+
+    <h2>Our Community</h2>
+    <p>Thousands of players enjoy ArcadeVerse every day.</p>
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <h1>15+</h1>
+            <span>🎮</span>
+            <h3>Games</h3>
+        </div>
+
+        <div class="stat-card">
+            <h1>5000+</h1>
+            <span>👥</span>
+            <h3>Players</h3>
+        </div>
+
+        <div class="stat-card">
+            <h1>4.9</h1>
+            <span>⭐</span>
+            <h3>Rating</h3>
+        </div>
+
+        <div class="stat-card">
+            <h1>100%</h1>
+            <span>🌍</span>
+            <h3>Offline</h3>
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="features">
+
+    <h2>Why Choose ArcadeVerse?</h2>
+    <p>Built for gamers who want quick, fun and hassle-free entertainment.</p>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Instant Play</h3>
+            <p>No installations. Click and start playing immediately.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🌐</div>
+            <h3>Works Offline</h3>
+            <p>Enjoy classic games even without an internet connection.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🆓</div>
+            <h3>Free Forever</h3>
+            <p>Every game is completely free to play.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Responsive Design</h3>
+            <p>Play comfortably on desktop, tablet or mobile.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🎮</div>
+            <h3>Classic Games</h3>
+            <p>Timeless games everyone enjoys, all in one place.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3>Fast & Lightweight</h3>
+            <p>Optimized for quick loading and smooth gameplay.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-logo">
+            <h2>🎮 ArcadeVerse</h2>
+            <p>Classic Offline Games for Everyone.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+
+            <a href="#">Home</a>
+            <a href="#featured">Featured Games</a>
+            <a href="#games">Games</a>
+            <a href="#">About</a>
+        </div>
+
+        <div class="footer-social">
+            <h3>Connect</h3>
+
+            <a href="https://github.com/" target="_blank">GitHub</a>
+
+            <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+
+            <a href="mailto:example@gmail.com">Email</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 ArcadeVerse • Made with ❤️ by Rucha Kadam
+    </div>
+
+</footer>
+<button id="topBtn" title="Go to top">⬆</button>
+    <script src="js/script.js"></script>
 </body>
 </html>
