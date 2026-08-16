@@ -1,6 +1,6 @@
 # 🎮 ArcadeVerse
 
-ArcadeVerse is an interactive web-based arcade featuring a collection of classic games built using HTML, CSS, and JavaScript.
+ArcadeVerse is an offline-friendly arcade website featuring multiple classic games built using HTML, CSS, and JavaScript.
 
 ## 🎯 Games
 
@@ -9,15 +9,6 @@ ArcadeVerse is an interactive web-based arcade featuring a collection of classic
 - 🧠 Memory
 - ✊ Rock Paper Scissors
 - 🔢 2048
-
-## ✨ Features
-
-- Clean and responsive user interface
-- Multiple playable games
-- Score tracking and high scores
-- Game sounds
-- Simple and lightweight design
-- Works directly in the browser
 
 ## 🛠️ Technologies Used
 
@@ -43,19 +34,18 @@ ArcadeVerse/
 ├── images/
 ├── js/
 ├── sounds/
-├── index.html/
-└── README.md/
-///
+├── index.html
+└── README.md
+```
 
-```markdown
 ## 🌐 Live Website
 
 [🎮 Play ArcadeVerse](https://ruchaakadam.github.io/ArcadeVerse/)
 
-🌐 Live Website
-🎮 Play ArcadeVerse
-👩‍💻 Author
-Rucha Kadam
-GitHub: https://github.com/ruchaakadam
-LinkedIn: https://www.linkedin.com/in/ruchaakadam
-Email: ruchaakadam.17@gmail.com
+## 👩‍💻 Author
+
+**Rucha Kadam**
+
+- GitHub: https://github.com/ruchaakadam
+- LinkedIn: https://www.linkedin.com/in/ruchaakadam
+- Email: ruchaakadam.17@gmail.com
