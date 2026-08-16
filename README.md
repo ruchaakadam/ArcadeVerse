@@ -45,3 +45,10 @@ ArcadeVerse/
 ├── sounds/
 ├── index.html
 └── README.md
+🌐 Live Website
+Play ArcadeVerse
+👩‍💻 Author
+Rucha Kadam
+GitHub: https://github.com/ruchaakadam
+LinkedIn: https://www.linkedin.com/in/ruchaakadam
+Email: ruchaakadam.17@gmail.com
