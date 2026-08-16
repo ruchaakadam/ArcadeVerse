@@ -38,6 +38,13 @@ ArcadeVerse/
 └── README.md
 ```
 
+## 📸 Screenshots
+
+### 🏠 Homepage
+
+![ArcadeVerse Homepage](images/arcadeverse-home.png)
+
+
 ## 🌐 Live Website
 
 [🎮 Play ArcadeVerse](https://ruchaakadam.github.io/ArcadeVerse/)
