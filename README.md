@@ -43,10 +43,11 @@ ArcadeVerse/
 ├── images/
 ├── js/
 ├── sounds/
-├── index.html
-└── README.md
+├── index.html/
+└── README.md/
+///
 
-
+```markdown
 ## 🌐 Live Website
 
 [🎮 Play ArcadeVerse](https://ruchaakadam.github.io/ArcadeVerse/)
