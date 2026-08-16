@@ -1,0 +1,327 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background:#081a2f;
+    color:white;
+    min-height:100vh;
+
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 60px;
+
+    background:#09162b;
+
+}
+
+.navbar h2{
+
+    font-size:40px;
+
+}
+
+.back-btn{
+
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+
+}
+
+.back-btn:hover{
+
+    color:#4FC3F7;
+
+}
+
+/* GAME */
+
+.game-container{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.game-container h1{
+
+    font-size:70px;
+    margin-bottom:40px;
+
+}
+
+/* SCORE */
+
+.scoreboard{
+
+    display:flex;
+    gap:40px;
+    margin-bottom:40px;
+
+}
+
+.score-card{
+
+    background:#243d77;
+
+    padding:20px 35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+}
+
+.score-card h3{
+
+    font-size:28px;
+
+}
+
+.score-card p{
+
+    margin-top:10px;
+
+    color:#38bdf8;
+
+    font-size:42px;
+
+    font-weight:bold;
+
+}
+
+/* TURN */
+
+.turn{
+
+    font-size:36px;
+
+    color:#4FC3F7;
+
+    margin-bottom:40px;
+
+}
+
+/* BOARD */
+
+.board{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,140px);
+
+    gap:15px;
+
+}
+
+/* CELLS */
+
+.cell{
+
+    width:140px;
+    height:140px;
+
+    background:#243d77;
+
+    border-radius:15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:80px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.cell:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* X */
+
+.cell.x{
+
+    color:#4FC3F7;
+
+    text-shadow:
+    0 0 10px #4FC3F7,
+    0 0 25px #4FC3F7;
+
+}
+
+/* O */
+
+.cell.o{
+
+    color:#FF5C8D;
+
+    text-shadow:
+    0 0 10px #FF5C8D,
+    0 0 25px #FF5C8D;
+
+}
+
+/* Winner */
+
+.winner{
+
+    animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+/* Restart */
+
+.restart-btn{
+
+    margin-top:50px;
+
+    border:none;
+
+    padding:18px 55px;
+
+    border-radius:40px;
+
+    background:#38bdf8;
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.restart-btn:hover{
+
+    background:#0EA5E9;
+
+    transform:translateY(-3px);
+
+}
+
+/* POPUP */
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.7);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    transition:.25s;
+
+    z-index:100;
+
+}
+
+.popup-box{
+
+    background:#243d77;
+
+    padding:45px;
+
+    width:500px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+}
+
+.popup-box h2{
+
+    font-size:52px;
+
+    margin-bottom:20px;
+
+}
+
+.popup-box p{
+
+    font-size:30px;
+
+    margin-bottom:35px;
+
+}
+
+#closePopup{
+
+    border:none;
+
+    background:#38bdf8;
+
+    color:white;
+
+    padding:18px 45px;
+
+    border-radius:40px;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#closePopup:hover{
+
+    background:#0EA5E9;
+
+}

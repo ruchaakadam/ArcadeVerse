@@ -1,0 +1,186 @@
+/* Rock Paper Scissors */
+
+.rps-container {
+    min-height: calc(100vh - 80px);
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(180deg, #081a36, #163d7a);
+    color: white;
+}
+
+.rps-container h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.rps-container .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.85;
+    margin-bottom: 40px;
+}
+
+
+/* Scoreboard */
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 45px;
+}
+
+.scoreboard div {
+    background: #142e5c;
+    padding: 20px 45px;
+    border-radius: 20px;
+    min-width: 120px;
+}
+
+.scoreboard span {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.scoreboard strong {
+    font-size: 2.5rem;
+}
+
+
+/* Choice buttons */
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.choice {
+    width: 150px;
+    height: 150px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #254b89;
+    color: white;
+
+    font-size: 3.5rem;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+}
+
+.choice span {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.choice:hover {
+    transform: translateY(-8px);
+    background: #38bdf8;
+    color: #06152d;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Result */
+
+.result-box {
+    background: #102957;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+#result {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#moves {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+
+/* Restart button */
+
+#restart-btn {
+    border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+
+    background: #38bdf8;
+    color: #06152d;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+#restart-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Back to games */
+
+.home-btn {
+    display: block;
+    width: fit-content;
+
+    margin: 25px auto 0;
+
+    color: white;
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.home-btn:hover {
+    text-decoration: underline;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .rps-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .scoreboard {
+        gap: 15px;
+    }
+
+    .scoreboard div {
+        padding: 15px 25px;
+        min-width: 90px;
+    }
+
+    .choices {
+        gap: 12px;
+    }
+
+    .choice {
+        width: 100px;
+        height: 110px;
+        font-size: 2.5rem;
+    }
+
+}

@@ -1,0 +1,204 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#081a2f;
+    color:white;
+    min-height:100vh;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:#09162b;
+    box-shadow:0 3px 10px rgba(0,0,0,.4);
+}
+
+.navbar h2{font-size:34px;}
+
+.nav-actions{
+    display:flex;
+    gap:25px;
+}
+
+.back-btn{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.back-btn:hover{color:#38bdf8;}
+
+.memory-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:50px 20px;
+}
+
+.memory-container h1{
+    font-size:56px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#cbd5e1;
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.scoreboard{
+    display:flex;
+    gap:25px;
+    margin-bottom:30px;
+}
+
+.score-card{
+    background:#243d77;
+    padding:15px 35px;
+    border-radius:16px;
+    text-align:center;
+    min-width:150px;
+}
+
+.score-card h3{font-size:20px;}
+.score-card p{
+    margin-top:8px;
+    color:#38bdf8;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.memory-board{
+    display:grid;
+    grid-template-columns:repeat(4,110px);
+    gap:15px;
+}
+
+.memory-card{
+    width:110px;
+    height:110px;
+    border:none;
+    border-radius:16px;
+    background:#243d77;
+    color:transparent;
+    cursor:pointer;
+    font-size:42px;
+    transition:transform .25s, background .25s;
+}
+
+.memory-card:hover{
+    transform:scale(1.05);
+    background:#31518d;
+}
+
+.memory-card.flipped,
+.memory-card.matched{
+    color:white;
+    background:#38bdf8;
+}
+
+.memory-card.matched{
+    cursor:default;
+}
+
+.buttons{margin-top:30px;}
+
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:35px;
+    background:#38bdf8;
+    color:#07162d;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    background:white;
+}
+
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:100;
+}
+
+.popup.show{display:flex;}
+
+.popup-box{
+    width:380px;
+    padding:35px;
+    border-radius:20px;
+    background:#10264a;
+    border:2px solid #38bdf8;
+    text-align:center;
+    box-shadow:0 0 25px #38bdf8;
+}
+
+.popup-box h2{
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.popup-box p{
+    color:#ddd;
+    font-size:19px;
+    margin-bottom:25px;
+}
+
+.popup-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.popup-buttons button{
+    padding:12px 22px;
+    font-size:16px;
+}
+
+@media(max-width:600px){
+    .navbar{
+        padding:18px 20px;
+    }
+
+    .navbar h2{font-size:24px;}
+
+    .nav-actions{gap:12px;}
+
+    .back-btn{font-size:15px;}
+
+    .memory-container h1{font-size:40px;}
+
+    .memory-board{
+        grid-template-columns:repeat(4,70px);
+        gap:10px;
+    }
+
+    .memory-card{
+        width:70px;
+        height:70px;
+        font-size:28px;
+    }
+
+    .score-card{
+        min-width:120px;
+        padding:12px 20px;
+    }
+}

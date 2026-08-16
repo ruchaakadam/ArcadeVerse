@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>2048 | ArcadeVerse</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/2048.css?v=2">
+    
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">🎮 ArcadeVerse</div>
+
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#games">Games</a>
+        </div>
+    </nav>
+
+    <main class="game2048-container">
+
+        <div class="game-header">
+
+            <div>
+                <h1>🔢 2048</h1>
+                <p>Join the numbers and reach 2048!</p>
+            </div>
+
+            <div class="score-box">
+                <span>Score</span>
+                <strong id="score">0</strong>
+            </div>
+
+        </div>
+
+        <div class="game-board" id="game-board">
+            <!-- Tiles are created using JavaScript -->
+        </div>
+
+        <div class="game-controls">
+
+            <button id="new-game-btn">
+                🔄 New Game
+            </button>
+
+            <a href="../index.html#games" class="back-btn">
+                ← Back to Games
+            </a>
+
+        </div>
+
+        <p class="instructions">
+            Use <strong>Arrow Keys</strong> or <strong>W A S D</strong> to move the tiles.
+        </p>
+
+        <div id="game-message" class="game-message hidden">
+            <h2>Game Over! 😢</h2>
+            <p>No more moves available.</p>
+            <button id="try-again-btn">Try Again</button>
+        </div>
+
+    </main>
+
+    <script src="../js/2048.js"></script>
+
+</body>
+</html>

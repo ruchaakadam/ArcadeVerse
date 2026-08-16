@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Snake | ArcadeVerse</title>
+
+    <link rel="stylesheet" href="../css/snake.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <h2>🎮 ArcadeVerse</h2>
+
+        <a href="../index.html" class="back-btn">
+            ← Home
+        </a>
+
+    </nav>
+
+    <div class="container">
+
+        <h1>🐍 Snake</h1>
+
+        <div class="scoreboard">
+
+            <div class="card">
+
+                <h3>Score</h3>
+
+                <p id="score">0</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>High Score</h3>
+
+                <p id="highScore">0</p>
+
+            </div>
+
+        </div>
+
+        <canvas
+            id="gameCanvas"
+            width="500"
+            height="500">
+        </canvas>
+
+        <p class="controls">
+            ⬅️ ➡️ ⬆️ ⬇️ Use Arrow Keys to Move
+        </p>
+
+        <div class="buttons">
+
+            <button id="startBtn">
+                ▶ Start Game
+            </button>
+
+            <button id="restartBtn">
+                🔄 Restart
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================
+     GAME POPUP
+========================== -->
+
+<div id="gamePopup" class="popup">
+
+    <div class="popup-box">
+
+        <h2 id="popupTitle">Game Over</h2>
+
+        <p id="popupMessage">
+            Your Score : 0
+        </p>
+
+        <div class="popup-buttons">
+
+            <button id="playAgainBtn">
+                Play Again
+            </button>
+
+            <button onclick="window.location='../index.html#games'">
+                Home
+            </button>
+
+        </div>
+
+         </div>
+    </div>
+     <script src="../js/snake.js"></script>
+</body>
+
+</html>

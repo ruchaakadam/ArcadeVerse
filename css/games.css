@@ -1,0 +1,256 @@
+.game-container{
+
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+.game-card{
+
+    width:300px;
+    background:#12264d;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+}
+.game-card:hover{
+
+    transform:translateY(-12px);
+    box-shadow:0 0 35px #38BDF8;
+}
+.game-card img{
+
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+.game-card h3{
+
+    padding:20px;
+    font-size:1.6rem;
+}
+.game-card p{
+
+    padding:0 20px;
+    color:#b6c6ff;
+}
+.game-card button{
+
+    margin:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:#38BDF8;
+    cursor:pointer;
+    font-weight:bold;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+background:#071629;
+color:white;
+min-height:100vh;
+
+}
+
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 10%;
+
+background:#08111f;
+
+}
+
+.back-btn{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+.game-container{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+padding:50px;
+
+}
+
+.game-container h1{
+
+font-size:3rem;
+
+margin-bottom:15px;
+
+}
+
+.turn{
+
+font-size:1.2rem;
+
+margin-bottom:35px;
+
+color:#49d6ff;
+
+}
+
+.board{
+
+display:grid;
+
+grid-template-columns:repeat(3,120px);
+
+grid-template-rows:repeat(3,120px);
+
+gap:12px;
+
+}
+
+.cell{
+
+background:#203864;
+
+border-radius:15px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:3rem;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.cell:hover{
+
+background:#31508a;
+
+}
+
+#restartBtn{
+
+margin-top:40px;
+
+padding:15px 35px;
+
+background:#35c8ff;
+
+color:white;
+
+border:none;
+
+border-radius:30px;
+
+font-size:1rem;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+#restartBtn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 15px 35px rgba(53,200,255,.35);
+
+}
+.cell{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:70px;
+    font-weight:bold;
+    cursor:pointer;
+
+    color:white;
+
+    transition:.3s;
+}
+
+.cell:hover{
+
+    background:#3d5fa6;
+
+}
+.restart-btn{
+
+    margin-top:40px;
+    padding:16px 42px;
+
+    border:none;
+    border-radius:40px;
+
+    background:#38bdf8;
+    color:white;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+.restart-btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#0ea5e9;
+
+    box-shadow:0 10px 30px rgba(56,189,248,.45);
+
+}
+.cell{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:72px;
+    font-weight:bold;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+.cell:hover{
+
+    transform:scale(1.05);
+
+    background:#37518c;
+
+}

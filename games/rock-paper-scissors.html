@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rock Paper Scissors | ArcadeVerse</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/rock-paper-scissors.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">🎮 ArcadeVerse</div>
+
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#games">Games</a>
+        </div>
+    </nav>
+
+    <main class="rps-container">
+
+        <h1>✊ Rock Paper Scissors ✋</h1>
+
+        <p class="subtitle">
+            Choose your move and challenge the computer!
+        </p>
+
+        <div class="scoreboard">
+            <div>
+                <span>You</span>
+                <strong id="player-score">0</strong>
+            </div>
+
+            <div>
+                <span>Computer</span>
+                <strong id="computer-score">0</strong>
+            </div>
+        </div>
+
+        <div class="choices">
+
+            <button class="choice" data-choice="rock">
+                ✊
+                <span>Rock</span>
+            </button>
+
+            <button class="choice" data-choice="paper">
+                ✋
+                <span>Paper</span>
+            </button>
+
+            <button class="choice" data-choice="scissors">
+                ✌️
+                <span>Scissors</span>
+            </button>
+
+        </div>
+
+        <div class="result-box">
+            <p id="result">Choose your move!</p>
+            <p id="moves"></p>
+        </div>
+
+        <button id="restart-btn">🔄 Restart Game</button>
+
+        <a href="../index.html#games" class="home-btn">
+            ← Back to Games
+        </a>
+
+    </main>
+
+    <script src="../js/rock-paper-scissors.js"></script>
+
+</body>
+</html>
