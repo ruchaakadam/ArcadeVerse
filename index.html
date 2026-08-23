@@ -1,289 +1,1732 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArcadeVerse</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <header>
-        <nav class="navbar">
-
-           <h1 class="logo">
-            <span>🎮</span> ArcadeVerse
-            </h1>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#games">Games</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-
-        </nav>
-    </header>
-
-    <section class="hero" id="home">
-
-    <div class="hero-content">
-        
-
-        <h2>Welcome. Compete. Have Fun.</h2>
-
-        <p>
-            Discover a collection of classic offline games
-            that you can enjoy anytime, anywhere.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="#games" class="btn-primary">Explore Games</a>
-            <a href="#featured" class="btn-secondary">Play Featured</a>
-        </div>
-
-    </div>
-    <div class="floating-icons">
-
-    <img src="images/icons/controller.png" class="icon controller">
-
-    <img src="images/icons/dice.png" class="icon dice">
-
-    <img src="images/icons/joystick.png" class="icon joystick">
-
-    <img src="images/icons/star.png" class="icon star">
-
-</div>
-</section>
-
-<section class="search-section">
-
-    <h2>Find Your Next Game</h2>
-
-    <input
-    type="text"
-        type="text"
-        placeholder="Search games..."
-        id="searchBar"
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
     >
 
-</section>
-<section class="categories" id="games">
+    <meta
+        name="description"
+        content="ArcadeVerse - fun browser games, challenges and endless entertainment."
+    >
 
-    <h2>Browse Categories</h2>
+    <title>ArcadeVerse | Play. Compete. Repeat.</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="site-header">
+
+    <nav
+        class="navbar"
+        aria-label="Main navigation"
+    >
+
+        <a
+            class="logo"
+            href="#home"
+        >
+            🎮 ArcadeVerse
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+
+        <ul
+            class="nav-links"
+            id="navLinks"
+        >
+
+            <li>
+                <a href="#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#games">
+                    Games
+                </a>
+            </li>
+
+            <li>
+                <a href="#categories">
+                    Categories
+                </a>
+            </li>
+
+            <li>
+                <a href="#featured">
+                    Featured
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+
+    <!-- Floating Emoji Decoration -->
+
+    <div
+        class="floating-emojis"
+        aria-hidden="true"
+    >
+
+        <span class="float float-1">🎮</span>
+
+        <span class="float float-2">🕹️</span>
+
+        <span class="float float-3">⭐</span>
+
+        <span class="float float-4">🚀</span>
+
+        <span class="float float-5">🐍</span>
+
+        <span class="float float-6">💣</span>
+
+        <span class="float float-7">🏆</span>
+
+        <span class="float float-8">👾</span>
+
+        <span class="float float-9">⚡</span>
+
+        <span class="float float-10">🧠</span>
+
+    </div>
+
+
+    <!-- Background Glow -->
+
+    <div
+        class="hero-glow glow-one"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="hero-glow glow-two"
+        aria-hidden="true"
+    ></div>
+
+
+    <div class="hero-content">
+
+
+        <div class="hero-badge">
+
+            ⚡ PLAY • COMPETE • REPEAT
+
+        </div>
+
+
+        <h1>
+
+            Welcome to
+
+            <span>
+                ArcadeVerse
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            A collection of quick games,
+            brain challenges and arcade classics —
+            all in one place.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#games"
+                class="btn-primary"
+            >
+
+                🎮 Explore Games
+
+                <span>
+                    ↓
+                </span>
+
+            </a>
+
+
+            <a
+                href="#featured"
+                class="btn-secondary"
+            >
+
+                ⭐ Featured Game
+
+            </a>
+
+        </div>
+
+
+        <div class="hero-mini-stats">
+
+
+            <div>
+
+                <strong id="heroGameCount">
+                    10
+                </strong>
+
+                <span>
+                    Games
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    100%
+                </strong>
+
+                <span>
+                    Browser Based
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    0
+                </strong>
+
+                <span>
+                    Downloads
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     GAMES
+===================================================== -->
+
+<section
+    class="games-section"
+    id="games"
+>
+
+
+    <div class="section-heading">
+
+
+        <div>
+
+            <span class="eyebrow">
+                🎮 THE ARCADE
+            </span>
+
+
+            <h2>
+
+                Pick Your
+
+                <span>
+                    Game
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Ten games. Different challenges.
+                One arcade.
+
+            </p>
+
+        </div>
+
+
+        <div class="game-count-pill">
+
+            <span id="visibleCount">
+                10
+            </span>
+
+            games available
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- SEARCH -->
+
+    <div class="search-wrap">
+
+        <span class="search-icon">
+            🔎
+        </span>
+
+
+        <input
+            type="search"
+            id="searchBar"
+            placeholder="Search for a game..."
+            autocomplete="off"
+            aria-label="Search games"
+        >
+
+
+        <button
+            id="clearSearch"
+            class="clear-search"
+            type="button"
+            aria-label="Clear search"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+
+    <!-- FILTERS -->
+
+    <div
+        class="filter-row"
+        id="filterRow"
+    >
+
+        <button
+            class="filter-btn active"
+            data-category="all"
+        >
+            🎮 All Games
+        </button>
+
+
+        <button
+            class="filter-btn"
+            data-category="arcade"
+        >
+            🕹️ Arcade
+        </button>
+
+
+        <button
+            class="filter-btn"
+            data-category="puzzle"
+        >
+            🧠 Puzzle
+        </button>
+
+
+        <button
+            class="filter-btn"
+            data-category="reflex"
+        >
+            ⚡ Reflex
+        </button>
+
+
+        <button
+            class="filter-btn"
+            data-category="multiplayer"
+        >
+            👥 Multiplayer
+        </button>
+
+    </div>
+
+
+
+    <!-- GAME GRID -->
+
+    <div
+        class="game-grid"
+        id="gameGrid"
+    >
+
+
+        <!-- =========================================
+             TIC TAC TOE
+        ========================================== -->
+
+        <article
+            class="game-card"
+            data-name="tic tac toe"
+            data-category="multiplayer puzzle"
+            data-difficulty="easy"
+        >
+
+            <div class="card-top">
+
+                <span class="game-emoji">
+                    ❌⭕
+                </span>
+
+                <span class="difficulty easy">
+                    Easy
+                </span>
+
+            </div>
+
+
+            <h3>
+                Tic Tac Toe
+            </h3>
+
+
+            <p>
+                Outsmart your opponent and
+                get three in a row.
+            </p>
+
+
+            <div class="card-meta">
+
+                <span>
+                    👥 2 Players
+                </span>
+
+                <span>
+                    🧠 Strategy
+                </span>
+
+            </div>
+
+
+            <a
+                href="games/tic-tac-toe.html"
+                class="play-btn"
+            >
+                Play Now →
+            </a>
+
+        </article>
+
+
+
+        <!-- =========================================
+             SNAKE
+        ========================================== -->
+
+        <article
+            class="game-card"
+            data-name="snake"
+            data-category="arcade reflex"
+            data-difficulty="medium"
+        >
+
+            <div class="card-top">
+
+                <span class="game-emoji">
+                    🐍
+                </span>
+
+                <span class="difficulty medium">
+                    Medium
+                </span>
+
+            </div>
+
+
+            <h3>
+                Snake
+            </h3>
+
+
+            <p>
+                Eat, grow and chase your
+                personal high score.
+            </p>
+
+
+            <div class="card-meta">
+
+                <span>
+                    🏆 High Score
+                </span>
+
+                <span>
+                    ⚡ Endless
+                </span>
+
+            </div>
+
+
+            <a
+                href="games/snake.html"
+                class="play-btn"
+            >
+                Play Now →
+            </a>
+
+        </article>
+
+
+
+        <!-- =========================================
+             MEMORY
+        ========================================== -->
+
+        <article
+            class="game-card"
+            data-name="memory game memory"
+            data-category="puzzle"
+            data-difficulty="easy"
+        >
+
+            <div class="card-top">
+
+                <span class="game-emoji">
+                    🧠
+                </span>
+
+                <span class="difficulty easy">
+                    Easy
+                </span>
+
+            </div>
+
+
+            <h3>
+                Memory Game
+            </h3>
+
+
+            <p>
+                Flip cards, remember positions
+                and match every pair.
+            </p>
+
+
+            <div class="card-meta">
+
+                <span>
+                    🧩 Puzzle
+                </span>
+
+                <span>
+                    ⏱ Timed
+                </span>
+
+            </div>
+
+
+            <a
+                href="games/memory.html"
+                class="play-btn"
+            >
+                Play Now →
+            </a>
+
+        </article>
+
+
+
+        <!-- =========================================
+             2048
+        ========================================== -->
+
+        <article
+            class="game-card"
+            data-name="2048"
+            data-category="puzzle"
+            data-difficulty="medium"
+        >
+
+            <div class="card-top">
+
+                <span class="game-emoji">
+                    🔢
+                </span>
+
+                <span class="difficulty medium">
+                    Medium
+                </span>
+
+            </div>
+
+
+            <h3>
+                2048
+            </h3>
+
+
+            <p>
+                Combine matching tiles and
+                reach the legendary 2048.
+            </p>
+
+
+            <div class="card-meta">
+
+                <span>
+                    🧠 Strategy
+                </span>
+
+                <span>
+                    🏆 Score
+                </span>
+
+            </div>
+
+
+            <a
+                href="games/2048.html"
+                class="play-btn"
+            >
+                Play Now →
+            </a>
+
+        </article>
+
+
+
+        <!-- =========================================
+             BREAKOUT
+        ========================================== -->
+
+        <article
+            class="game-card"
+            data-name="breakout brick breaker"
+            data-category="arcade reflex"
+            data-difficulty="medium"
+        >
+
+            <div class="card-top">
+
+                <span class="game-emoji">
+                    🧱
+                </span>
+
+                <span class="difficulty medium">
+                    Medium
+                </span>
+
+            </div>
+
+
+            <h3>
+                Breakout
+            </h3>
+
+
+            <p>
+                Smash the bricks, control the
+                paddle and keep the ball alive.
+            </p>
+
+
+            <div class="card-meta">
+
+                <span>
+                    🎯 Reflex
+                </span>
+
+                <span>
+                    🏆 Score
+                </span>
+
+            </div>
+
+
+            <a
+                href="games/breakout.html"
+                class="play-btn"
+            >
+                Play Now →
+            </a>
+
+        </article>
+
+
+
+        <!-- =========================================
+             FLAPPY BIRD
+        ========================================== -->
+
+        <article
+            class="game-card"
+            data-name="flappy bird"
+            data-category="arcade reflex"
+            data-difficulty="hard"
+        >
+
+            <div class="card-top">
+
+                <span class="game-emoji">
+                    🐦
+                </span>
+
+                <span class="difficulty hard">
+                    Hard
+                </span>
+
+            </div>
+
+
+            <h3>
+                Flappy Bird
+            </h3>
+
+
+            <p>
+                Fly through the pipes and
+                survive for as long as possible.
+            </p>
+
+
+            <div class="card-meta">
+
+                <span>
+                    ⚡ Reflex
+                </span>
+
+                <span>
+                    🏆 High Score
+                </span>
+
+            </div>
+
+
+            <a
+                href="games/flappy-bird.html"
+                class="play-btn"
+            >
+                Play Now →
+            </a>
+
+        </article>
+
+
+
+        <!-- =========================================
+             AIM TRAINER
+        ========================================== -->
+
+        <article
+            class="game-card"
+            data-name="aim trainer aim"
+            data-category="reflex arcade"
+            data-difficulty="medium"
+        >
+
+            <div class="card-top">
+
+                <span class="game-emoji">
+                    🎯
+                </span>
+
+                <span class="difficulty medium">
+                    Medium
+                </span>
+
+            </div>
+
+
+            <h3>
+                Aim Trainer
+            </h3>
+
+
+            <p>
+                Hit targets quickly and test
+                your reaction speed.
+            </p>
+
+
+            <div class="card-meta">
+
+                <span>
+                    ⚡ Reflex
+                </span>
+
+                <span>
+                    ⏱ Challenge
+                </span>
+
+            </div>
+
+
+            <a
+                href="games/aim-trainer.html"
+                class="play-btn"
+            >
+                Play Now →
+            </a>
+
+        </article>
+
+
+
+        <!-- =========================================
+             PONG
+        ========================================== -->
+
+        <article
+            class="game-card"
+            data-name="pong"
+            data-category="arcade multiplayer"
+            data-difficulty="hard"
+        >
+
+            <div class="card-top">
+
+                <span class="game-emoji">
+                    🏓
+                </span>
+
+                <span class="difficulty hard">
+                    Hard
+                </span>
+
+            </div>
+
+
+            <h3>
+                Pong
+            </h3>
+
+
+            <p>
+                Challenge the AI in a fast-paced
+                paddle battle.
+            </p>
+
+
+            <div class="card-meta">
+
+                <span>
+                    🤖 VS AI
+                </span>
+
+                <span>
+                    🏆 First to 5
+                </span>
+
+            </div>
+
+
+            <a
+                href="games/pong.html"
+                class="play-btn"
+            >
+                Play Now →
+            </a>
+
+        </article>
+
+
+
+        <!-- =========================================
+             MINESWEEPER
+        ========================================== -->
+
+        <article
+            class="game-card"
+            data-name="minesweeper mines"
+            data-category="puzzle"
+            data-difficulty="hard"
+        >
+
+            <div class="card-top">
+
+                <span class="game-emoji">
+                    💣
+                </span>
+
+                <span class="difficulty hard">
+                    Hard
+                </span>
+
+            </div>
+
+
+            <h3>
+                Minesweeper
+            </h3>
+
+
+            <p>
+                Find safe cells, use the clues
+                and avoid hidden mines.
+            </p>
+
+
+            <div class="card-meta">
+
+                <span>
+                    🧠 Logic
+                </span>
+
+                <span>
+                    ⏱ Timed
+                </span>
+
+            </div>
+
+
+            <a
+                href="games/minesweeper.html"
+                class="play-btn"
+            >
+                Play Now →
+            </a>
+
+        </article>
+
+
+
+        <!-- =========================================
+             SPACE SHOOTER
+        ========================================== -->
+
+        <article
+            class="game-card"
+            data-name="space shooter spaceship"
+            data-category="arcade reflex"
+            data-difficulty="hard"
+        >
+
+            <div class="card-top">
+
+                <span class="game-emoji">
+                    🚀
+                </span>
+
+                <span class="difficulty hard">
+                    Hard
+                </span>
+
+            </div>
+
+
+            <h3>
+                Space Shooter
+            </h3>
+
+
+            <p>
+                Destroy enemy ships, survive
+                waves and chase high scores.
+            </p>
+
+
+            <div class="card-meta">
+
+                <span>
+                    💥 Action
+                </span>
+
+                <span>
+                    ❤️ 3 Lives
+                </span>
+
+            </div>
+
+
+            <a
+                href="games/space-shooter.html"
+                class="play-btn"
+            >
+                Play Now →
+            </a>
+
+        </article>
+
+
+    </div>
+
+
+
+    <!-- NO RESULTS -->
+
+    <div
+        class="no-results"
+        id="noResults"
+        hidden
+    >
+
+        <div>
+            🎮
+        </div>
+
+        <h3>
+            No games found
+        </h3>
+
+        <p>
+            Try another search or choose
+            a different category.
+        </p>
+
+        <button
+            class="reset-btn"
+            id="resetFilters"
+        >
+            Show All Games
+        </button>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORIES
+===================================================== -->
+
+<section
+    class="categories"
+    id="categories"
+>
+
+
+    <div class="section-heading centered">
+
+        <span class="eyebrow">
+            🧭 BROWSE
+        </span>
+
+
+        <h2>
+
+            Choose Your
+
+            <span>
+                Vibe
+            </span>
+
+        </h2>
+
+
+        <p>
+            What are you in the mood for?
+        </p>
+
+    </div>
+
+
 
     <div class="category-grid">
 
-        <button class="category-card" type="button" data-category="Arcade">
-            🎮
-            <h3>Arcade</h3>
+
+        <button
+            class="category-card"
+            data-category-jump="arcade"
+        >
+
+            <span>
+                🕹️
+            </span>
+
+            <strong>
+                Arcade
+            </strong>
+
+            <small>
+                Fast & addictive
+            </small>
+
         </button>
 
-        <button class="category-card" type="button" data-category="Puzzle">
-            🧠
-            <h3>Puzzle</h3>
+
+        <button
+            class="category-card"
+            data-category-jump="puzzle"
+        >
+
+            <span>
+                🧠
+            </span>
+
+            <strong>
+                Puzzle
+            </strong>
+
+            <small>
+                Think it through
+            </small>
+
         </button>
-        <button class="category-card" type="button" data-category="Reflex">
-            ⚡
-            <h3>Reflex</h3>
+
+
+        <button
+            class="category-card"
+            data-category-jump="reflex"
+        >
+
+            <span>
+                ⚡
+            </span>
+
+            <strong>
+                Reflex
+            </strong>
+
+            <small>
+                Test your speed
+            </small>
+
         </button>
-        <button class="category-card" type="button" data-category="Multiplayer">
-            👥
-            <h3>Multiplayer</h3>
+
+
+        <button
+            class="category-card"
+            data-category-jump="multiplayer"
+        >
+
+            <span>
+                👥
+            </span>
+
+            <strong>
+                Multiplayer
+            </strong>
+
+            <small>
+                Challenge a friend
+            </small>
+
         </button>
+
+
     </div>
-</section>
-   <!-- ================= FEATURED GAMES ================= -->
 
-<section class="featured" id="featured">
-
-    <h2>⭐ Featured Games</h2>
-
-    <p class="featured-subtitle">
-        Choose a game and start playing instantly.
-    </p>
-
-    <div class="featured-grid">
-
-        <!-- Tic Tac Toe -->
-        <div class="featured-card" data-game data-category="Multiplayer">
-
-            <div class="game-icon">❌ ⭕</div>
-
-            <h3>Tic Tac Toe</h3>
-
-            <span class="difficulty easy">Easy</span>
-
-            <p>Classic Strategy Game</p>
-
-            <a href="games/tic-tac-toe.html" class="play-btn">
-                ▶ Play Now
-            </a>
-
-        </div>
-
-        <!-- Snake -->
-        <div class="featured-card" data-game data-category="Arcade">
-
-            <div class="game-icon">🐍</div>
-
-            <h3>Snake</h3>
-
-            <span class="difficulty medium">Medium</span>
-
-            <p>Arcade Game</p>
-
-            <a href="games/snake.html" class="play-btn">
-                ▶ Play Now
-            </a>
-
-        </div>
-
-        <!-- Memory -->
-        <div class="featured-card" data-game data-category="Puzzle">
-
-            <div class="game-icon">🧠</div>
-
-            <h3>Memory Game</h3>
-
-            <span class="difficulty easy">Easy</span>
-
-            <p>Match The Cards</p>
-
-            <a href="games/memory.html" class="play-btn">
-                ▶ Play Now
-            </a>
-
-        </div>
-
-    <!-- Rock Paper Scissors -->
-<div class="featured-card" data-game data-category="Multiplayer">
-
-    <div class="game-icon">✊ ✋ ✌️</div>
-
-    <h3>Rock Paper Scissors</h3>
-
-    <span class="difficulty easy">Easy</span>
-
-    <p>Classic Hand Game</p>
-
-    <a href="games/rock-paper-scissors.html" class="play-btn">
-        ▶ Play Now
-    </a>
-
-</div>
-<!-- 2048 -->
-<div class="featured-card" data-game data-category="Puzzle">
-
-    <div class="game-icon">🔢</div>
-
-    <h3>2048</h3>
-
-    <span class="difficulty medium">Medium</span>
-
-    <p>Number Puzzle Game</p>
-
-    <a href="games/2048.html" class="play-btn">
-        ▶ Play Now
-    </a>
-
-</div>
- </div>
-
-    <p id="noResults" class="no-results">No games found. Try another search or category.</p>
 
 </section>
-<!-- ================= WHY CHOOSE US ================= -->
 
-<section class="features" id="about">
 
-    <h2>Why Choose ArcadeVerse?</h2>
-    <p>Built for gamers who want quick, fun and hassle-free entertainment.</p>
+
+<!-- =====================================================
+     FEATURED GAME
+===================================================== -->
+
+<section
+    class="featured"
+    id="featured"
+>
+
+
+    <div class="section-heading centered">
+
+        <span class="eyebrow">
+            🔥 EDITOR'S PICK
+        </span>
+
+
+        <h2>
+
+            Featured
+
+            <span>
+                Game
+            </span>
+
+        </h2>
+
+
+        <p>
+            Need something fun right now?
+            Start here.
+        </p>
+
+    </div>
+
+
+
+    <div class="featured-banner">
+
+
+        <div class="featured-art">
+
+            🐍
+
+        </div>
+
+
+        <div class="featured-content">
+
+
+            <span class="featured-label">
+                🔥 FAN FAVORITE
+            </span>
+
+
+            <h3>
+                Snake
+            </h3>
+
+
+            <p>
+                Simple to learn.
+                Hard to master.
+                How high can you score?
+            </p>
+
+
+            <div class="featured-tags">
+
+                <span>
+                    Arcade
+                </span>
+
+                <span>
+                    Medium
+                </span>
+
+                <span>
+                    Endless
+                </span>
+
+            </div>
+
+
+            <a
+                href="games/snake.html"
+                class="btn-primary"
+            >
+                Play Snake →
+            </a>
+
+
+        </div>
+
+
+        <div
+            class="featured-decoration"
+            aria-hidden="true"
+        >
+            ✦ ✦ ✦
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section
+    class="stats"
+    id="about"
+>
+
+
+    <div class="section-heading centered">
+
+
+        <span class="eyebrow">
+            📊 ARCADEVERSE
+        </span>
+
+
+        <h2>
+
+            Small Project.
+
+            <span>
+                Big Fun.
+            </span>
+
+        </h2>
+
+
+        <p>
+            Built with HTML, CSS and JavaScript
+            and designed to keep growing.
+        </p>
+
+
+    </div>
+
+
+
+    <div class="stats-container">
+
+
+        <div class="stat-card">
+
+            <strong id="statGames">
+                10
+            </strong>
+
+            <span>
+                🎮
+            </span>
+
+            <h3>
+                Games
+            </h3>
+
+            <p>
+                and counting
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <strong>
+                100%
+            </strong>
+
+            <span>
+                🌐
+            </span>
+
+            <h3>
+                Browser Based
+            </h3>
+
+            <p>
+                no installation
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <strong>
+                3
+            </strong>
+
+            <span>
+                💻
+            </span>
+
+            <h3>
+                Web Tech
+            </h3>
+
+            <p>
+                HTML • CSS • JS
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <strong>
+                ∞
+            </strong>
+
+            <span>
+                🚀
+            </span>
+
+            <h3>
+                Possibilities
+            </h3>
+
+            <p>
+                more games ahead
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURES
+===================================================== -->
+
+<section class="features">
+
+
+    <div class="section-heading centered">
+
+
+        <span class="eyebrow">
+            ✨ WHY ARCADEVERSE?
+        </span>
+
+
+        <h2>
+
+            Made for
+
+            <span>
+                Quick Fun
+            </span>
+
+        </h2>
+
+
+        <p>
+            No complicated setup.
+            Pick a game and play.
+        </p>
+
+
+    </div>
+
+
 
     <div class="features-grid">
 
-        <div class="feature-card">
-            <div class="feature-icon">⚡</div>
-            <h3>Instant Play</h3>
-            <p>No installations. Click and start playing immediately.</p>
-        </div>
 
         <div class="feature-card">
-            <div class="feature-icon">🌐</div>
-            <h3>Works Offline</h3>
-            <p>Enjoy classic games even without an internet connection.</p>
+
+            <div class="feature-icon">
+                ⚡
+            </div>
+
+            <h3>
+                Instant Play
+            </h3>
+
+            <p>
+                Click a game and jump
+                straight into the action.
+            </p>
+
         </div>
 
-        <div class="feature-card">
-            <div class="feature-icon">🆓</div>
-            <h3>Free Forever</h3>
-            <p>Every game is completely free to play.</p>
-        </div>
 
         <div class="feature-card">
-            <div class="feature-icon">📱</div>
-            <h3>Responsive Design</h3>
-            <p>Play comfortably on desktop, tablet or mobile.</p>
+
+            <div class="feature-icon">
+                🌐
+            </div>
+
+            <h3>
+                Browser Based
+            </h3>
+
+            <p>
+                Everything runs directly
+                in your browser.
+            </p>
+
         </div>
 
-        <div class="feature-card">
-            <div class="feature-icon">🎮</div>
-            <h3>Classic Games</h3>
-            <p>Timeless games everyone enjoys, all in one place.</p>
-        </div>
 
         <div class="feature-card">
-            <div class="feature-icon">🚀</div>
-            <h3>Fast & Lightweight</h3>
-            <p>Optimized for quick loading and smooth gameplay.</p>
+
+            <div class="feature-icon">
+                🆓
+            </div>
+
+            <h3>
+                Free to Play
+            </h3>
+
+            <p>
+                Every game is built
+                for fun and practice.
+            </p>
+
         </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📱
+            </div>
+
+            <h3>
+                Responsive
+            </h3>
+
+            <p>
+                Designed for desktop,
+                tablet and mobile.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🏆
+            </div>
+
+            <h3>
+                High Scores
+            </h3>
+
+            <p>
+                Beat your records and
+                keep improving.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🚀
+            </div>
+
+            <h3>
+                Always Growing
+            </h3>
+
+            <p>
+                More games and features
+                are coming.
+            </p>
+
+        </div>
+
 
     </div>
+
 
 </section>
 
 
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer class="footer">
 
+
     <div class="footer-container">
 
+
         <div class="footer-logo">
-            <h2>🎮 ArcadeVerse</h2>
-            <p>Classic Offline Games for Everyone.</p>
+
+            <a
+                class="logo"
+                href="#home"
+            >
+                🎮 ArcadeVerse
+            </a>
+
+
+            <p>
+                Classic games.
+                Modern web.
+                Endless fun.
+            </p>
+
         </div>
+
+
 
         <div class="footer-links">
-            <h3>Quick Links</h3>
 
-            <a href="#home">Home</a>
-            <a href="#featured">Featured Games</a>
-            <a href="#games">Games</a>
-            <a href="#about">About</a>
+            <h3>
+                Explore
+            </h3>
+
+            <a href="#games">
+                Games
+            </a>
+
+            <a href="#categories">
+                Categories
+            </a>
+
+            <a href="#featured">
+                Featured
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
         </div>
+
+
 
         <div class="footer-social">
-            <h3>Connect</h3>
 
-            <a href="https://github.com/" target="_blank">GitHub</a>
+            <h3>
+                Connect
+            </h3>
 
-            <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+            <a
+                href="https://github.com/ruchaakadam"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
 
-            <a href="mailto:example@gmail.com">Email</a>
+            <a
+                href="https://www.linkedin.com/in/ruchaakadam/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn
+            </a>
+
+            <a href="mailto:ruchaakadam.17@gmail.com">
+                Email
+            </a>
+
         </div>
 
+
     </div>
+
+
 
     <div class="footer-bottom">
-        © 2026 ArcadeVerse • Made with ❤️ by Rucha Kadam
+
+        © 2026 ArcadeVerse
+        • Built with ❤️ and JavaScript
+        • 10 Games & Counting 🎮
+
     </div>
 
+
 </footer>
-<button id="topBtn" title="Go to top">⬆</button>
-    <script src="js/script.js"></script>
+
+
+
+<!-- BACK TO TOP -->
+
+<button
+    id="topBtn"
+    title="Go to top"
+    aria-label="Go to top"
+>
+    ↑
+</button>
+
+
+
+<script src="js/script.js"></script>
+
+
+<!-- =====================================================
+     FLOATING EMOJI ANIMATION
+===================================================== -->
+
+<script>
+
+    /*
+     * Give the floating emojis a tiny random
+     * horizontal movement so the hero feels alive.
+     */
+
+    const floatingEmojis =
+        document.querySelectorAll(
+            ".floating-emojis .float"
+        );
+
+
+    floatingEmojis.forEach(
+        (emoji, index) => {
+
+            emoji.style.animationDelay =
+                `${index * 0.35}s`;
+
+        }
+    );
+
+
+</script>
+
+
 </body>
+
 </html>

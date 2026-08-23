@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flappy Bird | ArcadeVerse</title>
+
+    <!-- IMPORTANT: CSS is one folder above games, then inside css -->
+    <link rel="stylesheet" href="../css/flappy-bird.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         NAVBAR
+    ================================= -->
+
+    <nav class="game-nav">
+
+        <div class="logo">
+            🎮 ArcadeVerse
+        </div>
+
+        <a href="../index.html" class="back-btn">
+            ← Back to Arcade
+        </a>
+
+    </nav>
+
+
+    <!-- ================================
+         MAIN GAME AREA
+    ================================= -->
+
+    <main class="game-container">
+
+        <h1>🐦 Flappy Bird</h1>
+
+        <p class="subtitle">
+            Tap to fly. Avoid the pipes!
+        </p>
+
+
+        <!-- ================================
+             SCOREBOARD
+        ================================= -->
+
+        <div class="scoreboard">
+
+            <div class="score-card">
+                <span>Score</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="score-card">
+                <span>High Score</span>
+                <strong id="highScore">0</strong>
+            </div>
+
+        </div>
+
+
+        <!-- ================================
+             CANVAS
+        ================================= -->
+
+        <div class="canvas-wrapper">
+
+            <canvas
+                id="flappyCanvas"
+                width="400"
+                height="600">
+            </canvas>
+
+        </div>
+
+
+        <!-- ================================
+             CONTROLS
+        ================================= -->
+
+        <p class="controls">
+            🖱️ Click &nbsp; | &nbsp;
+            ⌨️ Space &nbsp; | &nbsp;
+            📱 Tap
+        </p>
+
+
+        <!-- ================================
+             BUTTONS
+        ================================= -->
+
+        <div class="buttons">
+
+            <button id="startBtn">
+                ▶ Start Game
+            </button>
+
+            <button id="restartBtn">
+                🔄 Restart
+            </button>
+
+        </div>
+
+
+        <!-- ================================
+             GAME OVER POPUP
+        ================================= -->
+
+        <div id="gameOver" class="game-over hidden">
+
+            <div class="game-over-box">
+
+                <h2 id="gameOverTitle">
+                    💀 Game Over!
+                </h2>
+
+                <p>
+                    Your Score:
+                    <strong id="finalScore">0</strong>
+                </p>
+
+                <button id="playAgainBtn">
+                    🎮 Play Again
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- IMPORTANT: JavaScript -->
+    <script src="../js/flappy-bird.js"></script>
+
+</body>
+</html>

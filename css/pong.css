@@ -1,0 +1,478 @@
+/* =========================================
+   ARCADEVERSE
+   PONG
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #050816 0%,
+            #0b1735 50%,
+            #101d42 100%
+        );
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.game-nav {
+    width: 100%;
+
+    padding: 20px 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    background:
+        rgba(5,8,22,0.75);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+
+.back-btn {
+    text-decoration: none;
+
+    color: #ffffff;
+
+    padding:
+        10px 18px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.2);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255,255,255,0.05);
+
+    transition:
+        0.25s;
+}
+
+
+.back-btn:hover {
+    background:
+        rgba(255,255,255,0.12);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.game-container {
+    width: 95%;
+
+    max-width: 950px;
+
+    margin:
+        35px auto 60px;
+
+    text-align: center;
+}
+
+
+.game-container h1 {
+    font-size: 2.8rem;
+
+    margin-bottom: 8px;
+}
+
+
+.subtitle {
+    color: #aab4d6;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   SCOREBOARD
+========================================= */
+
+.scoreboard {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 16px;
+
+    margin-bottom: 22px;
+
+    flex-wrap: wrap;
+}
+
+
+.score-card {
+    min-width: 135px;
+
+    padding:
+        14px 22px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    border-radius: 14px;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    backdrop-filter:
+        blur(10px);
+
+    box-shadow:
+        0 8px 30px
+        rgba(0,0,0,0.18);
+}
+
+
+.score-card span {
+    display: block;
+
+    color: #9ca8ca;
+
+    font-size: 0.82rem;
+
+    margin-bottom: 6px;
+}
+
+
+.score-card strong {
+    font-size: 1.4rem;
+}
+
+
+/* =========================================
+   CANVAS
+========================================= */
+
+.canvas-wrapper {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 18px;
+}
+
+
+#pongCanvas {
+    display: block;
+
+    width: 800px;
+
+    max-width: 100%;
+
+    height: auto;
+
+    background:
+        #050b1d;
+
+    border:
+        3px solid
+        rgba(255,255,255,0.12);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,0.45);
+
+    touch-action: none;
+}
+
+
+/* =========================================
+   CONTROLS
+========================================= */
+
+.controls {
+    color: #9ca8ca;
+
+    margin:
+        12px 0 22px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+}
+
+
+.buttons button {
+    border: none;
+
+    padding:
+        13px 25px;
+
+    border-radius: 10px;
+
+    background:
+        #2563eb;
+
+    color: #ffffff;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        0.2s;
+}
+
+
+.buttons button:hover {
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.15);
+}
+
+
+.buttons button:active {
+    transform:
+        translateY(0);
+}
+
+
+#restartBtn {
+    background:
+        #334155;
+}
+
+
+/* =========================================
+   GAME OVER
+========================================= */
+
+.game-over {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(0,0,0,0.72);
+
+    backdrop-filter:
+        blur(5px);
+}
+
+
+.game-over.hidden {
+    display: none;
+}
+
+
+.game-over-box {
+    width: 100%;
+
+    max-width: 420px;
+
+    padding:
+        40px 30px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111c3b,
+            #091128
+        );
+
+    box-shadow:
+        0 25px 80px
+        rgba(0,0,0,0.55);
+}
+
+
+.game-over-box h2 {
+    font-size: 2rem;
+
+    margin-bottom: 15px;
+}
+
+
+.game-over-box p {
+    color: #aab4d6;
+
+    margin-bottom: 10px;
+}
+
+
+.final-score {
+    display: block;
+
+    font-size: 2.2rem;
+
+    margin-bottom: 25px;
+
+    color: #ffffff;
+}
+
+
+.game-over-box button {
+    border: none;
+
+    padding:
+        13px 25px;
+
+    border-radius: 10px;
+
+    background:
+        #2563eb;
+
+    color: #ffffff;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        0.2s;
+}
+
+
+.game-over-box button:hover {
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.15);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .game-nav {
+        padding:
+            15px 4%;
+    }
+
+
+    .logo {
+        font-size:
+            1.05rem;
+    }
+
+
+    .back-btn {
+        padding:
+            8px 12px;
+
+        font-size:
+            0.82rem;
+    }
+
+
+    .game-container h1 {
+        font-size:
+            2.2rem;
+    }
+
+
+    .score-card {
+        min-width:
+            110px;
+    }
+
+
+    .buttons {
+        flex-direction: column;
+
+        width: 90%;
+
+        max-width: 300px;
+
+        margin:
+            0 auto;
+    }
+
+
+    .buttons button {
+        width: 100%;
+    }
+
+}

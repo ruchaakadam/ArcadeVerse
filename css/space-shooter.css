@@ -1,0 +1,523 @@
+/* =========================================
+   ARCADEVERSE
+   SPACE SHOOTER
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #030712 0%,
+            #080d24 50%,
+            #111b3d 100%
+        );
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.game-nav {
+    width: 100%;
+
+    padding: 20px 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    background:
+        rgba(3,7,18,0.8);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+.logo {
+    font-size: 1.4rem;
+
+    font-weight: 700;
+}
+
+
+.back-btn {
+    text-decoration: none;
+
+    color: #ffffff;
+
+    padding:
+        10px 18px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.2);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255,255,255,0.05);
+
+    transition:
+        0.25s;
+}
+
+
+.back-btn:hover {
+    background:
+        rgba(255,255,255,0.12);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.game-container {
+    width: 95%;
+
+    max-width: 850px;
+
+    margin:
+        35px auto 60px;
+
+    text-align: center;
+}
+
+
+.game-container h1 {
+    font-size: 2.8rem;
+
+    margin-bottom: 8px;
+}
+
+
+.subtitle {
+    color: #aab4d6;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   SCOREBOARD
+========================================= */
+
+.scoreboard {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+
+    flex-wrap: wrap;
+}
+
+
+.score-card {
+    min-width: 130px;
+
+    padding:
+        14px 22px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    border-radius: 14px;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    backdrop-filter:
+        blur(10px);
+
+    box-shadow:
+        0 8px 30px
+        rgba(0,0,0,0.2);
+}
+
+
+.score-card span {
+    display: block;
+
+    color: #9ca8ca;
+
+    font-size: 0.82rem;
+
+    margin-bottom: 6px;
+}
+
+
+.score-card strong {
+    font-size: 1.3rem;
+}
+
+
+/* =========================================
+   GAME WRAPPER
+========================================= */
+
+.game-wrapper {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   CANVAS
+========================================= */
+
+#gameCanvas {
+    display: block;
+
+    width: 700px;
+
+    max-width: 100%;
+
+    height: auto;
+
+    background:
+        #020617;
+
+    border:
+        3px solid
+        rgba(255,255,255,0.12);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 70px
+        rgba(0,0,0,0.55);
+
+    touch-action: none;
+
+    cursor: crosshair;
+}
+
+
+/* =========================================
+   CONTROLS
+========================================= */
+
+.controls {
+    color: #9ca8ca;
+
+    margin:
+        12px 0 22px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+}
+
+
+.buttons button {
+    border: none;
+
+    padding:
+        13px 25px;
+
+    border-radius: 10px;
+
+    background:
+        #2563eb;
+
+    color:
+        #ffffff;
+
+    font-size:
+        1rem;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+.buttons button:hover {
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.15);
+}
+
+
+.buttons button:active {
+    transform:
+        translateY(0);
+}
+
+
+#restartBtn {
+    background:
+        #334155;
+}
+
+
+/* =========================================
+   GAME OVER
+========================================= */
+
+.game-over {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(0,0,0,0.75);
+
+    backdrop-filter:
+        blur(6px);
+}
+
+
+.game-over.hidden {
+    display: none;
+}
+
+
+.game-over-box {
+    width: 100%;
+
+    max-width: 420px;
+
+    padding:
+        40px 30px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111c3b,
+            #080f25
+        );
+
+    box-shadow:
+        0 25px 80px
+        rgba(0,0,0,0.6);
+}
+
+
+.game-over-box h2 {
+    font-size:
+        2rem;
+
+    margin-bottom:
+        15px;
+}
+
+
+.game-over-box p {
+    color:
+        #aab4d6;
+
+    margin-bottom:
+        10px;
+}
+
+
+.final-score {
+    display: block;
+
+    font-size:
+        2.4rem;
+
+    margin-bottom:
+        25px;
+}
+
+
+.game-over-box button {
+    border: none;
+
+    padding:
+        13px 25px;
+
+    border-radius:
+        10px;
+
+    background:
+        #2563eb;
+
+    color:
+        #ffffff;
+
+    font-size:
+        1rem;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.2s;
+}
+
+
+.game-over-box button:hover {
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.15);
+}
+
+
+/* =========================================
+   HIDDEN
+========================================= */
+
+.hidden {
+    display:
+        none !important;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .game-nav {
+        padding:
+            15px 4%;
+    }
+
+
+    .logo {
+        font-size:
+            1.05rem;
+    }
+
+
+    .back-btn {
+        padding:
+            8px 12px;
+
+        font-size:
+            0.82rem;
+    }
+
+
+    .game-container {
+        margin-top:
+            25px;
+    }
+
+
+    .game-container h1 {
+        font-size:
+            2.2rem;
+    }
+
+
+    .score-card {
+        min-width:
+            110px;
+    }
+
+
+    .buttons {
+        flex-direction:
+            column;
+
+        width:
+            90%;
+
+        max-width:
+            300px;
+
+        margin:
+            0 auto;
+    }
+
+
+    .buttons button {
+        width:
+            100%;
+    }
+
+}

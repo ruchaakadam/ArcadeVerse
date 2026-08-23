@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Space Shooter | ArcadeVerse</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/space-shooter.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         NAVBAR
+    ================================== -->
+
+    <nav class="game-nav">
+
+        <div class="logo">
+            🎮 ArcadeVerse
+        </div>
+
+        <a
+            href="../index.html"
+            class="back-btn"
+        >
+            ← Back to Arcade
+        </a>
+
+    </nav>
+
+
+
+    <!-- =================================
+         GAME CONTAINER
+    ================================== -->
+
+    <main class="game-container">
+
+        <h1>
+            🚀 Space Shooter
+        </h1>
+
+        <p class="subtitle">
+            Destroy the enemies and survive!
+        </p>
+
+
+
+        <!-- =================================
+             SCOREBOARD
+        ================================== -->
+
+        <div class="scoreboard">
+
+            <div class="score-card">
+
+                <span>
+                    Score
+                </span>
+
+                <strong id="score">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <span>
+                    Lives
+                </span>
+
+                <strong id="lives">
+                    ❤️❤️❤️
+                </strong>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <span>
+                    High Score
+                </span>
+
+                <strong id="highScore">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             GAME AREA
+        ================================== -->
+
+        <div class="game-wrapper">
+
+            <canvas
+                id="gameCanvas"
+                width="700"
+                height="600"
+            >
+            </canvas>
+
+        </div>
+
+
+
+        <!-- =================================
+             CONTROLS
+        ================================== -->
+
+        <p class="controls">
+
+            ⬅️ ➡️ Move
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            🚀 Space = Shoot
+
+        </p>
+
+
+
+        <!-- =================================
+             BUTTONS
+        ================================== -->
+
+        <div class="buttons">
+
+            <button id="startBtn">
+                ▶ Start Game
+            </button>
+
+            <button id="restartBtn">
+                🔄 Restart
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================
+             GAME OVER
+        ================================== -->
+
+        <div
+            id="gameOver"
+            class="game-over hidden"
+        >
+
+            <div class="game-over-box">
+
+                <h2 id="gameOverTitle">
+                    💀 Game Over!
+                </h2>
+
+
+                <p>
+                    Final Score
+                </p>
+
+
+                <strong
+                    id="finalScore"
+                    class="final-score"
+                >
+                    0
+                </strong>
+
+
+                <button id="playAgainBtn">
+                    🚀 Play Again
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+
+    <script src="../js/space-shooter.js"></script>
+
+</body>
+
+</html>

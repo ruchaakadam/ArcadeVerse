@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Pong | ArcadeVerse</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/pong.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================
+         NAVBAR
+    ================================= -->
+
+    <nav class="game-nav">
+
+        <div class="logo">
+            🎮 ArcadeVerse
+        </div>
+
+        <a
+            href="../index.html"
+            class="back-btn"
+        >
+            ← Back to Arcade
+        </a>
+
+    </nav>
+
+
+
+    <!-- ================================
+         GAME
+    ================================= -->
+
+    <main class="game-container">
+
+        <h1>
+            🏓 Pong
+        </h1>
+
+        <p class="subtitle">
+            Beat the AI. First to 5 wins!
+        </p>
+
+
+
+        <!-- SCORE -->
+
+        <div class="scoreboard">
+
+            <div class="score-card">
+
+                <span>
+                    You
+                </span>
+
+                <strong id="playerScore">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <span>
+                    AI
+                </span>
+
+                <strong id="aiScore">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <span>
+                    High Score
+                </span>
+
+                <strong id="highScore">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CANVAS -->
+
+        <div class="canvas-wrapper">
+
+            <canvas
+                id="pongCanvas"
+                width="800"
+                height="500"
+            >
+            </canvas>
+
+        </div>
+
+
+
+        <!-- CONTROLS -->
+
+        <p class="controls">
+
+            ⬆️ Arrow Up
+            &nbsp;&nbsp;
+            ⬇️ Arrow Down
+
+        </p>
+
+
+
+        <!-- BUTTONS -->
+
+        <div class="buttons">
+
+            <button id="startBtn">
+                ▶ Start Game
+            </button>
+
+            <button id="restartBtn">
+                🔄 Restart
+            </button>
+
+        </div>
+
+
+
+        <!-- GAME OVER -->
+
+        <div
+            id="gameOver"
+            class="game-over hidden"
+        >
+
+            <div class="game-over-box">
+
+                <h2 id="gameOverTitle">
+                        🏆 You Win!
+                </h2>
+
+
+                <p>
+                    Final Score
+                </p>
+
+
+                <strong
+                    id="finalScore"
+                    class="final-score"
+                >
+                    0 - 0
+                </strong>
+
+
+               <button id="playAgainBtn">
+                     ▶ Start Next Round
+                </button>
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+
+    <script src="../js/pong.js"></script>
+
+</body>
+
+</html>

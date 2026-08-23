@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Aim Trainer | ArcadeVerse</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/aim-trainer.css"
+    >
+</head>
+
+<body>
+
+    <!-- ================================
+         NAVBAR
+    ================================= -->
+
+    <nav class="game-nav">
+
+        <div class="logo">
+            🎮 ArcadeVerse
+        </div>
+
+        <a
+            href="../index.html"
+            class="back-btn"
+        >
+            ← Back to Arcade
+        </a>
+
+    </nav>
+
+
+    <!-- ================================
+         MAIN
+    ================================= -->
+
+    <main class="game-container">
+
+        <h1>🎯 Aim Trainer</h1>
+
+        <p class="subtitle">
+            How fast can you hit the targets?
+        </p>
+
+
+        <!-- ================================
+             SCOREBOARD
+        ================================= -->
+
+        <div class="scoreboard">
+
+            <div class="score-card">
+
+                <span>
+                    Score
+                </span>
+
+                <strong id="score">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <span>
+                    Time
+                </span>
+
+                <strong id="time">
+                    30
+                </strong>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <span>
+                    Accuracy
+                </span>
+
+                <strong id="accuracy">
+                    100%
+                </strong>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <span>
+                    High Score
+                </span>
+
+                <strong id="highScore">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================
+             GAME AREA
+        ================================= -->
+
+        <div
+            id="gameArea"
+            class="game-area"
+        >
+
+            <div
+                id="startMessage"
+                class="start-message"
+            >
+
+                <div class="start-icon">
+                    🎯
+                </div>
+
+                <h2>
+                    Ready?
+                </h2>
+
+                <p>
+                    Click Start Game to begin
+                </p>
+
+            </div>
+
+
+            <button
+                id="target"
+                class="target hidden"
+                aria-label="Target"
+            >
+            </button>
+
+        </div>
+
+
+        <!-- ================================
+             CONTROLS
+        ================================= -->
+
+        <p class="controls">
+            🖱️ Click the targets as quickly as possible
+        </p>
+
+
+        <!-- ================================
+             BUTTONS
+        ================================= -->
+
+        <div class="buttons">
+
+            <button id="startBtn">
+                ▶ Start Game
+            </button>
+
+            <button id="restartBtn">
+                🔄 Restart
+            </button>
+
+        </div>
+
+
+        <!-- ================================
+             GAME OVER
+        ================================= -->
+
+        <div
+            id="gameOver"
+            class="game-over hidden"
+        >
+
+            <div class="game-over-box">
+
+                <h2>
+                    🏁 Time's Up!
+                </h2>
+
+                <div class="results">
+
+                    <p>
+                        Score:
+                        <strong id="finalScore">
+                            0
+                        </strong>
+                    </p>
+
+                    <p>
+                        Accuracy:
+                        <strong id="finalAccuracy">
+                            0%
+                        </strong>
+                    </p>
+
+                    <p>
+                        Targets Hit:
+                        <strong id="finalHits">
+                            0
+                        </strong>
+                    </p>
+
+                </div>
+
+                <button id="playAgainBtn">
+                    🎯 Play Again
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/aim-trainer.js"></script>
+
+</body>
+
+</html>

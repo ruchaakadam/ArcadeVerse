@@ -1,0 +1,710 @@
+/* =========================================
+   ARCADEVERSE
+   MINESWEEPER
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #050816 0%,
+            #0b1735 50%,
+            #101d42 100%
+        );
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.game-nav {
+    width: 100%;
+
+    padding: 20px 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    background:
+        rgba(5,8,22,0.75);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+.logo {
+    font-size: 1.4rem;
+
+    font-weight: 700;
+}
+
+
+.back-btn {
+    text-decoration: none;
+
+    color: #ffffff;
+
+    padding:
+        10px 18px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.2);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255,255,255,0.05);
+
+    transition:
+        0.25s;
+}
+
+
+.back-btn:hover {
+    background:
+        rgba(255,255,255,0.12);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.game-container {
+    width: 95%;
+
+    max-width: 700px;
+
+    margin:
+        35px auto 60px;
+
+    text-align: center;
+}
+
+
+.game-container h1 {
+    font-size: 2.8rem;
+
+    margin-bottom: 8px;
+}
+
+
+.subtitle {
+    color: #aab4d6;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   SCOREBOARD
+========================================= */
+
+.scoreboard {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+
+    flex-wrap: wrap;
+}
+
+
+.score-card {
+    min-width: 125px;
+
+    padding:
+        14px 20px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    border-radius: 14px;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    backdrop-filter:
+        blur(10px);
+
+    box-shadow:
+        0 8px 30px
+        rgba(0,0,0,0.18);
+}
+
+
+.score-card span {
+    display: block;
+
+    color: #9ca8ca;
+
+    font-size: 0.82rem;
+
+    margin-bottom: 6px;
+}
+
+
+.score-card strong {
+    font-size: 1.3rem;
+}
+
+
+/* =========================================
+   BOARD WRAPPER
+========================================= */
+
+.board-wrapper {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 100%;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   GAME BOARD
+========================================= */
+
+.game-board {
+    display: grid;
+
+    grid-template-columns:
+        repeat(10, 40px);
+
+    grid-template-rows:
+        repeat(10, 40px);
+
+    gap: 3px;
+
+    padding: 8px;
+
+    background:
+        #111827;
+
+    border:
+        2px solid
+        rgba(255,255,255,0.12);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,0.45);
+}
+
+
+/* =========================================
+   CELLS
+========================================= */
+
+.cell {
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    border-radius: 6px;
+
+    background:
+        #334155;
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        background 0.12s ease,
+        transform 0.12s ease;
+}
+
+
+.cell:hover {
+    background:
+        #475569;
+
+    transform:
+        scale(1.03);
+}
+
+
+/* =========================================
+   REVEALED CELL
+========================================= */
+
+.cell.revealed {
+    background:
+        #1e293b;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.06);
+
+    cursor: default;
+
+    transform: none;
+}
+
+
+.cell.revealed:hover {
+    transform: none;
+
+    background:
+        #1e293b;
+}
+
+
+/* =========================================
+   FLAG
+========================================= */
+
+.cell.flagged {
+    background:
+        #3b2f59;
+
+    color:
+        #fbbf24;
+}
+
+
+/* =========================================
+   MINE
+========================================= */
+
+.cell.mine {
+    background:
+        #7f1d1d;
+
+    color:
+        #ffffff;
+}
+
+
+/* =========================================
+   NUMBER COLORS
+========================================= */
+
+.cell.number-1 {
+    color:
+        #60a5fa;
+}
+
+
+.cell.number-2 {
+    color:
+        #4ade80;
+}
+
+
+.cell.number-3 {
+    color:
+        #f87171;
+}
+
+
+.cell.number-4 {
+    color:
+        #c084fc;
+}
+
+
+.cell.number-5 {
+    color:
+        #fb923c;
+}
+
+
+.cell.number-6 {
+    color:
+        #22d3ee;
+}
+
+
+.cell.number-7 {
+    color:
+        #f472b6;
+}
+
+
+.cell.number-8 {
+    color:
+        #94a3b8;
+}
+
+
+/* =========================================
+   CONTROLS
+========================================= */
+
+.controls {
+    color:
+        #9ca8ca;
+
+    margin:
+        15px 0 22px;
+
+    font-size:
+        0.92rem;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+}
+
+
+.buttons button {
+    border: none;
+
+    padding:
+        13px 25px;
+
+    border-radius: 10px;
+
+    background:
+        #2563eb;
+
+    color:
+        #ffffff;
+
+    font-size:
+        1rem;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.2s;
+}
+
+
+.buttons button:hover {
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.15);
+}
+
+
+.buttons button:active {
+    transform:
+        translateY(0);
+}
+
+
+#restartBtn {
+    background:
+        #334155;
+}
+
+
+/* =========================================
+   GAME OVER
+========================================= */
+
+.game-over {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+        rgba(0,0,0,0.72);
+
+    backdrop-filter:
+        blur(5px);
+}
+
+
+.game-over.hidden {
+    display: none;
+}
+
+
+.game-over-box {
+    width: 100%;
+
+    max-width: 420px;
+
+    padding:
+        40px 30px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111c3b,
+            #091128
+        );
+
+    box-shadow:
+        0 25px 80px
+        rgba(0,0,0,0.55);
+}
+
+
+.game-over-box h2 {
+    font-size:
+        2rem;
+
+    margin-bottom:
+        15px;
+}
+
+
+.game-over-box p {
+    color:
+        #aab4d6;
+
+    margin-bottom:
+        12px;
+}
+
+
+.result-time {
+    font-size:
+        1.05rem;
+}
+
+
+.result-time strong {
+    color:
+        #ffffff;
+}
+
+
+.game-over-box button {
+    border: none;
+
+    padding:
+        13px 25px;
+
+    margin-top:
+        15px;
+
+    border-radius:
+        10px;
+
+    background:
+        #2563eb;
+
+    color:
+        #ffffff;
+
+    font-size:
+        1rem;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.2s;
+}
+
+
+.game-over-box button:hover {
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.15);
+}
+
+
+/* =========================================
+   HIDDEN
+========================================= */
+
+.hidden {
+    display:
+        none !important;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .game-nav {
+        padding:
+            15px 4%;
+    }
+
+
+    .logo {
+        font-size:
+            1.05rem;
+    }
+
+
+    .back-btn {
+        padding:
+            8px 12px;
+
+        font-size:
+            0.82rem;
+    }
+
+
+    .game-container h1 {
+        font-size:
+            2.2rem;
+    }
+
+
+    .game-board {
+        grid-template-columns:
+            repeat(10, 30px);
+
+        grid-template-rows:
+            repeat(10, 30px);
+
+        gap: 2px;
+
+        padding:
+            6px;
+    }
+
+
+    .cell {
+        width:
+            30px;
+
+        height:
+            30px;
+
+        font-size:
+            0.8rem;
+
+        border-radius:
+            4px;
+    }
+
+
+    .score-card {
+        min-width:
+            110px;
+    }
+
+
+    .controls {
+        line-height:
+            1.7;
+    }
+
+
+    .buttons {
+        flex-direction:
+            column;
+
+        width:
+            90%;
+
+        max-width:
+            300px;
+
+        margin:
+            0 auto;
+    }
+
+
+    .buttons button {
+        width:
+            100%;
+    }
+
+}

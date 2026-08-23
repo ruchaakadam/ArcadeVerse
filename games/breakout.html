@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Breakout | ArcadeVerse</title>
+
+    <link rel="stylesheet" href="../css/breakout.css">
+</head>
+
+<body>
+
+    <nav class="game-nav">
+        <div class="logo">🎮 ArcadeVerse</div>
+
+        <a href="../index.html" class="back-btn">
+            ← Back to Arcade
+        </a>
+    </nav>
+
+
+    <main class="game-container">
+
+        <h1>🧱 Breakout</h1>
+
+        <p class="subtitle">
+            Break the bricks. Don't let the ball fall!
+        </p>
+
+
+        <!-- SCOREBOARD -->
+
+        <div class="scoreboard">
+
+            <div class="score-card">
+                <span>Score</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="score-card">
+                <span>High Score</span>
+                <strong id="highScore">0</strong>
+            </div>
+
+            <div class="score-card">
+                <span>Lives</span>
+                <strong id="lives">❤️❤️❤️</strong>
+            </div>
+
+        </div>
+
+
+        <!-- GAME -->
+
+        <div class="canvas-wrapper">
+
+            <canvas
+                id="breakoutCanvas"
+                width="600"
+                height="500">
+            </canvas>
+
+        </div>
+
+
+        <!-- CONTROLS -->
+
+        <p class="controls">
+            ⬅️ Move Left &nbsp;&nbsp; ➡️ Move Right
+        </p>
+
+
+        <div class="buttons">
+
+            <button id="startBtn">
+                ▶ Start Game
+            </button>
+
+            <button id="restartBtn">
+                🔄 Restart
+            </button>
+
+        </div>
+
+
+        <!-- GAME OVER -->
+
+        <div id="gameOver" class="game-over hidden">
+
+            <div class="game-over-box">
+
+                <h2 id="gameOverTitle">
+                    Game Over!
+                </h2>
+
+                <p>
+                    Your Score:
+                    <strong id="finalScore">0</strong>
+                </p>
+
+                <button id="playAgainBtn">
+                    🎮 Play Again
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/breakout.js"></script>
+
+</body>
+</html>

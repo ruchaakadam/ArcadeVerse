@@ -1,0 +1,523 @@
+/* =========================================
+   ARCADEVERSE
+   FLAPPY BIRD
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #050816 0%,
+            #0b1735 50%,
+            #101d42 100%
+        );
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.game-nav {
+    width: 100%;
+
+    padding: 20px 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    background:
+        rgba(5, 8, 22, 0.75);
+
+    backdrop-filter: blur(12px);
+}
+
+
+.logo {
+    font-size: 1.4rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+}
+
+
+.back-btn {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    padding: 10px 18px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.2);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.back-btn:hover {
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.game-container {
+    width: 95%;
+
+    max-width: 750px;
+
+    margin:
+        35px auto 60px;
+
+    text-align: center;
+}
+
+
+.game-container h1 {
+    font-size: 2.8rem;
+
+    margin-bottom: 8px;
+}
+
+
+.subtitle {
+    color: #aab4d6;
+
+    font-size: 1rem;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   SCOREBOARD
+========================================= */
+
+.scoreboard {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+
+    flex-wrap: wrap;
+}
+
+
+.score-card {
+    min-width: 140px;
+
+    padding:
+        14px 24px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 14px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+        0 8px 30px
+        rgba(0, 0, 0, 0.2);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.score-card span {
+    display: block;
+
+    color: #9ca8ca;
+
+    font-size: 0.85rem;
+
+    margin-bottom: 6px;
+}
+
+
+.score-card strong {
+    display: block;
+
+    font-size: 1.4rem;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   CANVAS AREA
+========================================= */
+
+.canvas-wrapper {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 100%;
+
+    margin-bottom: 18px;
+}
+
+
+#flappyCanvas {
+    display: block;
+
+    width: 400px;
+
+    max-width: 100%;
+
+    height: auto;
+
+    border:
+        3px solid
+        rgba(255, 255, 255, 0.15);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.45);
+
+    cursor: pointer;
+
+    touch-action: none;
+}
+
+
+/* =========================================
+   CONTROLS
+========================================= */
+
+.controls {
+    color: #aab4d6;
+
+    font-size: 0.95rem;
+
+    margin:
+        12px 0 22px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.buttons button {
+    border: none;
+
+    padding:
+        13px 25px;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    background: #2563eb;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.buttons button:hover {
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.15);
+}
+
+
+.buttons button:active {
+    transform:
+        translateY(0);
+}
+
+
+#restartBtn {
+    background: #334155;
+}
+
+
+/* =========================================
+   GAME OVER OVERLAY
+========================================= */
+
+.game-over {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(0, 0, 0, 0.72);
+
+    backdrop-filter: blur(5px);
+}
+
+
+/* THIS IS IMPORTANT */
+
+.game-over.hidden {
+    display: none;
+}
+
+
+.game-over-box {
+    width: 100%;
+
+    max-width: 400px;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111c3b,
+            #091128
+        );
+
+    box-shadow:
+        0 25px 80px
+        rgba(0, 0, 0, 0.55);
+}
+
+
+.game-over-box h2 {
+    font-size: 2rem;
+
+    margin-bottom: 15px;
+}
+
+
+.game-over-box p {
+    color: #b7c0da;
+
+    margin-bottom: 25px;
+
+    font-size: 1rem;
+}
+
+
+.game-over-box p strong {
+    color: #ffffff;
+
+    font-size: 1.3rem;
+}
+
+
+.game-over-box button {
+    border: none;
+
+    padding:
+        13px 25px;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.game-over-box button:hover {
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.15);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .game-nav {
+        padding:
+            15px 4%;
+    }
+
+
+    .logo {
+        font-size: 1.05rem;
+    }
+
+
+    .back-btn {
+        padding:
+            8px 12px;
+
+        font-size:
+            0.82rem;
+    }
+
+
+    .game-container {
+        margin-top: 25px;
+    }
+
+
+    .game-container h1 {
+        font-size: 2.2rem;
+    }
+
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+
+    .score-card {
+        min-width: 120px;
+
+        padding:
+            12px 18px;
+    }
+
+
+    .buttons {
+        flex-direction: column;
+
+        width: 90%;
+
+        max-width: 300px;
+
+        margin:
+            0 auto;
+    }
+
+
+    .buttons button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
+
+@media (max-width: 400px) {
+
+    .game-container h1 {
+        font-size: 1.9rem;
+    }
+
+
+    .scoreboard {
+        gap: 10px;
+    }
+
+
+    .score-card {
+        min-width: 110px;
+    }
+
+}

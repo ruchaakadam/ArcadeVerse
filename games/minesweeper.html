@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Minesweeper | ArcadeVerse</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/minesweeper.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="game-nav">
+
+        <div class="logo">
+            🎮 ArcadeVerse
+        </div>
+
+        <a
+            href="../index.html"
+            class="back-btn"
+        >
+            ← Back to Arcade
+        </a>
+
+    </nav>
+
+
+
+    <!-- GAME -->
+
+    <main class="game-container">
+
+        <h1>
+            💣 Minesweeper
+        </h1>
+
+        <p class="subtitle">
+            Find the safe cells. Avoid the mines!
+        </p>
+
+
+
+        <!-- SCOREBOARD -->
+
+        <div class="scoreboard">
+
+            <div class="score-card">
+
+                <span>
+                    Mines
+                </span>
+
+                <strong id="mineCount">
+                    10
+                </strong>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <span>
+                    Time
+                </span>
+
+                <strong id="timer">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <span>
+                    Best Time
+                </span>
+
+                <strong id="bestTime">
+                    --
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- GAME BOARD -->
+
+        <div class="board-wrapper">
+
+            <div
+                id="gameBoard"
+                class="game-board"
+            >
+            </div>
+
+        </div>
+
+
+
+        <!-- CONTROLS -->
+
+        <p class="controls">
+
+            🖱️ Left Click = Reveal
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            🚩 Right Click = Flag
+
+        </p>
+
+
+
+        <!-- BUTTONS -->
+
+        <div class="buttons">
+
+            <button id="startBtn">
+                ▶ Start Game
+            </button>
+
+            <button id="restartBtn">
+                🔄 Restart
+            </button>
+
+        </div>
+
+
+
+        <!-- GAME OVER -->
+
+        <div
+            id="gameOver"
+            class="game-over hidden"
+        >
+
+            <div class="game-over-box">
+
+                <h2 id="gameOverTitle">
+                    💣 Game Over!
+                </h2>
+
+
+                <p id="gameOverMessage">
+                    You hit a mine!
+                </p>
+
+
+                <p class="result-time">
+                    Time:
+                    <strong id="finalTime">
+                        0
+                    </strong>
+                    seconds
+                </p>
+
+
+                <button id="playAgainBtn">
+                    🎮 Play Again
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+
+    <script src="../js/minesweeper.js"></script>
+
+</body>
+
+</html>
