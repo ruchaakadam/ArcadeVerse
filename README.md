@@ -4,7 +4,15 @@
 
 ArcadeVerse is a browser-based arcade gaming website featuring a collection of classic, puzzle, reflex, and action games — all brought together in one fun and interactive platform.
 
-The project is built using **HTML, CSS, and JavaScript** and is designed to run directly in a web browser without requiring any downloads or installations.
+The project is built using **HTML, CSS, and JavaScript** and runs directly in a web browser without requiring downloads or installations.
+
+---
+
+## 🌐 Play ArcadeVerse
+
+🎮 **[🚀 Launch ArcadeVerse](https://ruchaakadam.github.io/ArcadeVerse/)**
+
+Play all 10 games directly in your browser — no download required!
 
 ---
 
